@@ -46,3 +46,22 @@ exports.deleteCompany = async (req, res) => {
         res.json(error);
     }
 }
+
+exports.updateCompany = async (req,res) => {
+    try {
+        console.log("updating company");
+        const companyId = req.body.company_id;
+        let company = await Company.findByIdAndUpdate(companyId, {
+            name: req.body.name == "" ? undefined : req.body.name,
+            domain: req.body.domain == "" ? undefined : req.body.domain,
+            email: req.body.email == "" ? undefined : req.body.email,
+            phone: req.body.phone == "" ? undefined : req.body.phone,
+            hero_caption: req.body.hero_caption == "" ? undefined : req.body.hero_caption
+        }, {new: true});
+        console.log(req.body.domain);
+        await company.save();
+        res.json({message: "Updated successfully!", company: company});
+    } catch (error) {
+        res.json(error);
+    }
+}

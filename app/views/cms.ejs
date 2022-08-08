@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title>
+
+    <link rel="stylesheet" href="/css/cms.css">
+</head>
+
+<body>
+    <section>
+        <table>
+            <tr>
+                <td>
+                    <h1>Add Company</h1>
+                    <div>
+                        <form action="http://localhost:5000/companies" method="POST">
+                            <input type="text" name="name" placeholder="Company Name *">
+                            <br>
+                            <input type="text" name="domain" placeholder="Domain">
+                            <br>
+                            <input type="text" name="email" placeholder="Email">
+                            <br>
+                            <input type="text" name="phone" placeholder="Phone">
+                            <br>
+                            <input type="text" name="hero_caption" placeholder="Hero Caption">
+                            <br>
+                            <button type="submit">Sumbit</button>
+                        </form>
+                    </div>
+                </td>
+                <td>
+                    <h1>Update Company</h1>
+                    <div>
+                        <form action="http://localhost:5000/companies?_method=PUT" method="POST">                            
+                            <input type="text" name="company_id" placeholder="Company Id *">
+                            <br>
+                            <input type="text" name="name" placeholder="Company Name">
+                            <br>
+                            <input type="text" name="domain" placeholder="Domain">
+                            <br>
+                            <input type="text" name="email" placeholder="Email">
+                            <br>
+                            <input type="text" name="phone" placeholder="Phone">
+                            <br>
+                            <input type="text" name="hero_caption" placeholder="Hero Caption">
+                            <br>
+                            <button type="submit">Sumbit</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+    </section>
+</body>
+</html>
