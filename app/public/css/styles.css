@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5%;
+}
+
+.hero {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 50px 5%;
+}
